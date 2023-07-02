@@ -17,6 +17,21 @@ rd /s /q "%teamsAppData%\*"
 rd /s /q "%teamsLocalAppData%\*"
 echo.
 
+REM Deleting temporary files from %temp% folder
+echo Deleting temporary files from %temp% folder...
+echo.
+del /s /q "%temp%\*.*"
+echo.
+
+REM Delay between deletions (3 seconds)
+timeout /t 3 >nul
+
+REM Deleting files from prefetch folder
+echo Deleting files from prefetch folder...
+echo.
+del /s /q "%systemroot%\Prefetch\*.*"
+echo.
+
 REM Delay before browser history deletion (3 seconds)
 timeout /t 3 >nul
 
