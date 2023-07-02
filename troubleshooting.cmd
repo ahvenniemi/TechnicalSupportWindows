@@ -17,6 +17,10 @@ REM Displaying IP configuration
 echo IP Configuration: >> "%output%"
 ipconfig /all >> "%output%"
 
+REM Displaying system information
+echo System Information: >> "%output%"
+systeminfo >> "%output%"
+
 REM Ping test
 echo Ping Test: >> "%output%"
 ping www.google.com >> "%output%"
